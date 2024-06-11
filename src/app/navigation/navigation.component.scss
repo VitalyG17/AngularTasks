@@ -1,0 +1,21 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #2ba12b;
+  color: white;
+  padding: 5px 15px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+button:hover {
+  background: #27d627;
+  transition: 0.3s;
+}
