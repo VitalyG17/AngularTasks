@@ -8,9 +8,10 @@ import {SecondTaskComponent} from './pages/second-task/second-task.component';
 import {FirstTaskComponent} from './pages/first-task/first-task.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { TransformDatePipe } from './pipes/transform-date.pipe';
 
 @NgModule({
-  declarations: [AppComponent, SecondTaskComponent, FirstTaskComponent, ErrorPageComponent, NavigationComponent],
+  declarations: [AppComponent, SecondTaskComponent, FirstTaskComponent, ErrorPageComponent, NavigationComponent, TransformDatePipe],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
