@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, inject, OnDestroy, OnInit} from '@angular/core';
 import {HttpService, User} from 'src/app/services/http.service';
 import {Subscription} from 'rxjs';
 
@@ -11,8 +11,7 @@ import {Subscription} from 'rxjs';
 export class ThirdTaskComponent implements OnInit, OnDestroy {
   protected users: User[] = [];
   private subscription: Subscription = new Subscription();
-
-  constructor(private readonly httpService: HttpService) {}
+  private readonly httpService: HttpService = inject(HttpService);
 
   public ngOnInit(): void {
     this.subscription = this.httpService.getData().subscribe((users: User[]): void => {
