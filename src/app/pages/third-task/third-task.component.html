@@ -1,0 +1,7 @@
+<div *ngFor="let user of users">
+  <span>{{ user.name }} {{user.surname}}, {{ user.age }}</span>
+  <br>Hobby:
+  <ul>
+    <li *ngFor="let hobby of user.hobby">{{ hobby }}</li>
+  </ul>
+</div>

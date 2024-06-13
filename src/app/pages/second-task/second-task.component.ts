@@ -7,9 +7,9 @@ import {Component} from '@angular/core';
 })
 export class SecondTaskComponent {
   protected currentDate: Date = new Date();
-  protected oneDayTime: number = 24 * 60 * 60 * 1000;
 
   protected changeDay(increment: number): void {
-    this.currentDate = new Date(this.currentDate.getTime() + increment * this.oneDayTime);
+    const oneDayTime: number = 24 * 60 * 60 * 1000;
+    this.currentDate = new Date(this.currentDate.getTime() + increment * oneDayTime);
   }
 }

@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Vitaly",
+      "surname": "Gulyaev",
+      "age": 20,
+      "hobby": [
+        "football", "computer games"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Rayan",
+      "surname": "Gosuslugi",
+      "age": 43,
+      "hobby": [
+        "collect barbie dolls", "don't die at the end of the \"Drive\""
+      ]
+    }
+  ]
+}
