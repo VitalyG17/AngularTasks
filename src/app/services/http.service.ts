@@ -8,16 +8,9 @@ export class User {
   public surname: string;
   public age: number;
   public hobby: string[];
-  public address: {id: number; street: string; numberHome: number};
+  public address: Address;
 
-  constructor(
-    id: number,
-    name: string,
-    surname: string,
-    age: number,
-    hobby: string[],
-    address: {id: number; street: string; numberHome: number},
-  ) {
+  constructor(id: number, name: string, surname: string, age: number, hobby: string[], address: Address) {
     this.id = id;
     this.name = name;
     this.surname = surname;
@@ -27,6 +20,18 @@ export class User {
   }
   public get fullAddress(): string {
     return `${this.address.street} ${this.address.numberHome}`;
+  }
+}
+
+class Address {
+  public id: number;
+  public street: string;
+  public numberHome: number;
+
+  constructor(id: number, street: string, numberHome: number) {
+    this.id = id;
+    this.street = street;
+    this.numberHome = numberHome;
   }
 }
 
