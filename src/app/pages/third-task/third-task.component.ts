@@ -1,6 +1,7 @@
 import {Component, inject, OnDestroy, OnInit} from '@angular/core';
-import {HttpService, User} from 'src/app/services/http.service';
+import {HttpService} from 'src/app/services/http.service';
 import {Subscription} from 'rxjs';
+import {User} from '../../types/user';
 
 @Component({
   selector: 'app-third-task',
