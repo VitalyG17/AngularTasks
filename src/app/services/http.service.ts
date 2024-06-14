@@ -25,7 +25,7 @@ export class User {
     this.hobby = hobby;
     this.address = address;
   }
-  public getAdress(): string {
+  public get fullAddress(): string {
     return `${this.address.street} ${this.address.numberHome}`;
   }
 }
