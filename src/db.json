@@ -7,7 +7,12 @@
       "age": 20,
       "hobby": [
         "football", "computer games"
-      ]
+      ],
+      "address": {
+        "id": 1,
+        "street": "Lenina",
+        "numberHome": 1
+      }
     },
     {
       "id": 2,
@@ -16,7 +21,12 @@
       "age": 43,
       "hobby": [
         "collect barbie dolls", "don't die at the end of the \"Drive\""
-      ]
+      ],
+      "address": {
+        "id": 2,
+        "street": "Preobrazhenskaya",
+        "numberHome": 17
+      }
     }
   ]
 }
