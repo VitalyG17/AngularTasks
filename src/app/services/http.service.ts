@@ -18,9 +18,6 @@ export class User {
     this.hobby = hobby;
     this.address = address;
   }
-  public get fullAddress(): string {
-    return `${this.address.street} ${this.address.numberHome}`;
-  }
 }
 
 class Address {
@@ -33,6 +30,9 @@ class Address {
     this.street = street;
     this.numberHome = numberHome;
   }
+  public get fullAddress(): string {
+    return `${this.street} ${this.numberHome}`;
+  }
 }
 
 @Injectable()
@@ -44,7 +44,17 @@ export class HttpService {
   public getData(): Observable<User[]> {
     return this.http.get<User[]>(this.url).pipe(
       map((users: User[]) =>
-        users.map((user: User) => new User(user.id, user.name, user.surname, user.age, user.hobby, user.address)),
+        users.map(
+          (user: User) =>
+            new User(
+              user.id,
+              user.name,
+              user.surname,
+              user.age,
+              user.hobby,
+              new Address(user.address.id, user.address.street, user.address.numberHome),
+            ),
+        ),
       ),
       catchError((err: unknown) => {
         console.error('Error!', err);
